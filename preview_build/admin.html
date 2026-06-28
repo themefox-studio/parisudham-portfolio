@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Parisudham</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <style>
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .admin-layout .sidebar a { cursor: pointer; }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Parisudham CMS Logo" class="logo-img">
+            </a>
+            <div class="nav-actions">
+                 <button class="btn btn-outline" onclick="logout()">Logout</button>
+                 <a href="index.html" class="btn btn-primary" style="margin-left: 10px;">&larr; View Site</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-layout">
+        <aside class="sidebar">
+            <a class="tab-link active" onclick="switchTab('products-tab', this)">Products</a>
+            <a class="tab-link" onclick="switchTab('categories-tab', this)">Categories</a>
+            <a class="tab-link" onclick="switchTab('testimonials-tab', this)">Testimonials</a>
+            <a class="tab-link" onclick="switchTab('page-content-tab', this)">Page Content</a>
+            <a class="tab-link" onclick="switchTab('users-tab', this)" id="users-menu-item" style="display:none;">User Management</a>
+        </aside>
+        
+        <section class="admin-content">
+            <!-- PRODUCTS TAB -->
+            <div id="products-tab" class="tab-content active">
+                <h2>Manage Products</h2>
+                <button class="btn btn-primary mt-4" onclick="openProductModal()">+ Add New Product</button>
+                <div style="overflow-x: auto;">
+                    <table class="table" id="products-table">
+                        <thead>
+                            <tr>
+                                <th>Order</th>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>New Arrival</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- CATEGORIES TAB -->
+            <div id="categories-tab" class="tab-content">
+                <h2>Manage Categories</h2>
+                <button class="btn btn-primary mt-4" onclick="openCategoryModal()">+ Add New Category</button>
+                <div style="overflow-x: auto;">
+                    <table class="table" id="categories-table">
+                        <thead>
+                            <tr>
+                                <th>Order</th>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TESTIMONIALS TAB -->
+            <div id="testimonials-tab" class="tab-content">
+                <h2>Manage Testimonials</h2>
+                <button class="btn btn-primary mt-4" onclick="openTestimonialModal()">+ Add Testimonial</button>
+                <div style="overflow-x: auto;">
+                    <table class="table" id="testimonials-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Rating</th>
+                                <th>Text</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- PAGE CONTENT TAB -->
+            <div id="page-content-tab" class="tab-content">
+                <h2>Page Content & Settings</h2>
+                <form id="page-content-form" onsubmit="savePageContent(event)">
+                    <div class="form-group">
+                        <label>Home Page 'About' Text</label>
+                        <textarea id="pc-about" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Brochure PDF URL</label>
+                        <input type="text" id="pc-brochure">
+                        <small>Upload a file below or paste a URL.</small>
+                        <input type="file" id="pc-brochure-file" accept=".pdf">
+                    </div>
+                    <div class="form-group">
+                        <label>Facebook URL</label>
+                        <input type="text" id="pc-facebook">
+                    </div>
+                    <div class="form-group">
+                        <label>Instagram URL</label>
+                        <input type="text" id="pc-instagram">
+                    </div>
+                    <div class="form-group">
+                        <label>Google Review Widget Embed HTML</label>
+                        <textarea id="pc-google-review" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Content</button>
+                </form>
+            </div>
+
+            <!-- USERS TAB -->
+            <div id="users-tab" class="tab-content">
+                <h2>Manage Users</h2>
+                <button class="btn btn-primary mt-4" onclick="openUserModal()">+ Add User</button>
+                <table class="table" id="users-table">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Role</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Generic Modal container (hidden by default) -->
+    <div id="generic-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:1000; align-items:center; justify-content:center;">
+        <div style="background:#fff; padding:30px; border-radius:8px; width:90%; max-width:500px; max-height:90vh; overflow-y:auto;" id="modal-content-area">
+            <!-- Modal forms injected by JS -->
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

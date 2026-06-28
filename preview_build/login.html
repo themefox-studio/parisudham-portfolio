@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | Parisudham</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <style>
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="login-container">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="images/logo.png" alt="Parisudham Admin" style="max-width: 200px;">
+        </div>
+        <form id="login-form">
+            <div class="form-group" style="text-align: left;">
+                <label>Username</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="form-group" style="text-align: left;">
+                <label>Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <div id="error-msg" style="color: red; margin-bottom: 15px; display: none;"></div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+        </form>
+        <a href="index.html" style="display: block; margin-top: 20px; color: #666;">&larr; Back to Site</a>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Parisudham</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><img src="images/logo.png" alt="Parisudham Logo" class="logo-img"></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="categories.html">Products</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                 <a href="images/Parisudham_Brochure.pdf" class="btn btn-outline" target="_blank" download>Download Brochure</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-padding bg-light">
+            <div class="container text-center">
+                <h1 class="section-title">Get in Touch</h1>
+                <p>We'd love to hear from you.</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; text-align: left;">
+                    <div style="background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                        <h2 style="margin-bottom: 20px;">Contact Details</h2>
+                        <div id="contact-info-block">
+                            <p>Loading...</p>
+                        </div>
+                    </div>
+                    <div style="background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                        <h2 style="margin-bottom: 20px;">Send a Message</h2>
+                        <form onsubmit="event.preventDefault(); alert('Message sent!');">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-4">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>Parisudham</h3>
+                <p>The Purest of the Pure.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="categories.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" id="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Loading contact details...</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Parisudham Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="js/static-data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const data = await fetchSiteData();
+            const contactBlock = document.getElementById('contact-info-block');
+            if (data && data.siteDetails && data.siteDetails.contact) {
+                contactBlock.innerHTML = `
+                    <p><strong>Address:</strong><br>${data.siteDetails.contact.address.replace(',', '<br>')}</p>
+                    <p style="margin-top: 15px;"><strong>Phone:</strong><br>${data.siteDetails.contact.phone1}<br>${data.siteDetails.contact.phone2}</p>
+                    <p style="margin-top: 15px;"><strong>Website:</strong><br><a href="http://${data.siteDetails.contact.website}">${data.siteDetails.contact.website}</a></p>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

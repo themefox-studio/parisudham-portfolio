@@ -1,0 +1,172 @@
+window.STATIC_DB = {
+  "categories": [
+    {
+      "id": "flour-podi-mixes",
+      "name": "Flour, Podi & Mixes",
+      "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80",
+      "order": 1
+    },
+    {
+      "id": "chips-snack-items",
+      "name": "Chips & Snack Items",
+      "image": "https://loremflickr.com/600/400/chips,snack",
+      "order": 2
+    },
+    {
+      "id": "pulses-legumes",
+      "name": "Pulses & Legumes",
+      "image": "https://images.unsplash.com/photo-1515543237350-b3eea1ec8082?w=600&q=80",
+      "order": 3
+    },
+    {
+      "id": "beverages",
+      "name": "Beverages",
+      "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&q=80",
+      "order": 4
+    },
+    {
+      "id": "sweeteners-cooking-essentials",
+      "name": "Sweeteners & Cooking Essentials",
+      "image": "https://images.unsplash.com/photo-1587314168485-3236d6710814?w=600&q=80",
+      "order": 5
+    },
+    {
+      "id": "candies-confectionery",
+      "name": "Candies & Confectionery",
+      "image": "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=600&q=80",
+      "order": 6
+    },
+    {
+      "id": "rice-products",
+      "name": "Rice & Rice Products",
+      "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80",
+      "order": 7
+    },
+    {
+      "id": "coconut-products",
+      "name": "Coconut Products",
+      "image": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=600&q=80",
+      "order": 8
+    },
+    {
+      "id": "traditional-snacks",
+      "name": "Traditional Snacks",
+      "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80",
+      "order": 9
+    },
+    {
+      "id": "spices-masala-powders",
+      "name": "Spices & Masala Powders",
+      "image": "https://images.unsplash.com/photo-1596649859556-9d332617f1a3?w=600&q=80",
+      "order": 10
+    }
+  ],
+  "products": [
+    {
+      "id": "appam-podi",
+      "name": "Appam Podi",
+      "categoryId": "flour-podi-mixes",
+      "description": "Authentic Appam Podi for soft and fluffy appams.",
+      "features": [
+        "100% Natural",
+        "No Preservatives",
+        "Easy to Cook"
+      ],
+      "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600&q=80",
+      "isNewArrival": true,
+      "order": 1
+    },
+    {
+      "id": "jackfruit-chips",
+      "name": "Jackfruit Chips",
+      "categoryId": "chips-snack-items",
+      "description": "Crispy and delicious Jackfruit chips made from premium quality jackfruit.",
+      "features": [
+        "Crunchy",
+        "Traditional Taste"
+      ],
+      "image": "https://images.unsplash.com/photo-1528750717929-32abb73d3bd9?w=600&q=80",
+      "isNewArrival": true,
+      "order": 2
+    },
+    {
+      "id": "roasted-peanuts",
+      "name": "Roasted Peanuts",
+      "categoryId": "traditional-snacks",
+      "description": "Crunchy and fresh roasted peanuts.",
+      "features": [
+        "High Protein",
+        "Perfect Snack"
+      ],
+      "image": "https://loremflickr.com/600/400/peanuts",
+      "isNewArrival": true,
+      "order": 3
+    },
+    {
+      "id": "virgin-coconut-oil",
+      "name": "Virgin Coconut Oil",
+      "categoryId": "coconut-products",
+      "description": "Cold-pressed pure virgin coconut oil.",
+      "features": [
+        "Cold Pressed",
+        "100% Pure"
+      ],
+      "image": "https://loremflickr.com/600/400/coconut",
+      "isNewArrival": true,
+      "order": 4
+    },
+    {
+      "id": "green-gram",
+      "name": "Green Gram (Moong Dal)",
+      "categoryId": "pulses-legumes",
+      "description": "Premium quality green gram.",
+      "features": [
+        "Rich in Fiber",
+        "Unpolished"
+      ],
+      "image": "https://loremflickr.com/600/400/lentils",
+      "isNewArrival": true,
+      "order": 5
+    },
+    {
+      "id": "turmeric-powder",
+      "name": "Turmeric Powder",
+      "categoryId": "spices-masala-powders",
+      "description": "Bright and aromatic turmeric powder sourced from the best farms.",
+      "features": [
+        "High Curcumin",
+        "Natural Color"
+      ],
+      "image": "https://loremflickr.com/600/400/turmeric",
+      "isNewArrival": true,
+      "order": 6
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t-1",
+      "name": "Sarah J.",
+      "text": "The spices from Parisudham are incredibly fresh. It brings the true taste of Kerala to our home!",
+      "rating": 5,
+      "image": ""
+    }
+  ],
+  "pageContent": {
+    "homeAbout": "We specialize in sourcing the finest products from the heart of Kerala, ensuring long shelf-life and strict compliance with international food safety standards.",
+    "brochureUrl": "",
+    "facebookUrl": "https://facebook.com",
+    "instagramUrl": "https://instagram.com",
+    "googleReviewHtml": ""
+  },
+  "siteDetails": {
+    "companyName": "Parisudham",
+    "tagline": "Delivering \"The Purest of the Pure\" across Frozen Foods, Edible Oils, Grocery, Spices, and Health Care.",
+    "quote": "Quality you can trust, tradition you can taste.",
+    "contact": {
+      "address": "PARISUDHAM LTD, 3/18 THIRD AVENUES, WHANGAREI, NEWZEALAND-0110",
+      "phone1": "0204400900",
+      "phone2": "0220200900",
+      "website": "WWW.PARISUDHAM.IN"
+    }
+  }
+};
