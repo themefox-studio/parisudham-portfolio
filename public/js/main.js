@@ -28,4 +28,17 @@ function updateFooter(siteDetails) {
 document.addEventListener('DOMContentLoaded', async () => {
     const data = await fetchSiteData();
     updateFooter(data.siteDetails);
+
+    // Hamburger menu toggle logic
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const navActions = document.querySelector('.nav-actions');
+
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            if (navActions) navActions.classList.toggle('active');
+        });
+    }
 });
