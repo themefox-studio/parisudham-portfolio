@@ -8,14 +8,14 @@
 
 body {
     font-family: $font-body;
-    color: $dark;
+    color: $text-color;
     background-color: $bg-light;
     line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $font-heading;
-    color: $primary-dark;
+    color: $heading-color;
 }
 
 a {

@@ -5,15 +5,15 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  color: #333333;
+  font-family: "Sen", sans-serif;
+  color: #808080;
   background-color: #faf9f6;
   line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", serif;
-  color: #8c1010;
+  font-family: "Bree Serif", serif;
+  color: #333333;
 }
 
 a {
@@ -54,7 +54,7 @@ img {
 .btn {
   display: inline-block;
   padding: 10px 24px;
-  border-radius: 8px;
+  border-radius: 50px;
   font-weight: 600;
   cursor: pointer;
   border: 2px solid transparent;
@@ -134,7 +134,7 @@ img {
 
 .category-card {
   background-color: #ffffff;
-  border-radius: 8px;
+  border-radius: 50px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
@@ -258,7 +258,7 @@ img {
   margin-top: 40px;
 }
 .product-detail .product-img {
-  border-radius: 8px;
+  border-radius: 50px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   background-color: #fff;
