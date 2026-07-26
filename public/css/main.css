@@ -245,6 +245,11 @@ img {
   font-weight: 400;
 }
 
+.testimonials {
+  background-color: #CF3247;
+  color: #ffffff;
+}
+
 /* Footer */
 .footer {
   background-color: #221F1F;
