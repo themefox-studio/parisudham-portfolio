@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Sen:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Sen:wght@400;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header class="navbar">
         <div class="container nav-container">
@@ -25,7 +28,8 @@
                 <a href="contact.html">Contact</a>
             </nav>
             <div class="nav-actions">
-                 <a href="images/Parisudham_Brochure.pdf" class="btn btn-outline" target="_blank" download>Download Brochure</a>
+                <a href="images/Parisudham_Brochure.pdf" class="btn btn-outline" target="_blank" download>Download
+                    Brochure</a>
             </div>
         </div>
     </header>
@@ -35,7 +39,8 @@
         <section class="hero-slider">
             <div class="slider-container">
                 <div class="slide active">
-                    <img src="images/banner.jpg" alt="Parisudham Banner - The Purest of the Pure" onerror="this.src='https://images.unsplash.com/photo-1596649859556-9d332617f1a3?q=80&w=2000&auto=format&fit=crop'">
+                    <img src="images/banner.jpg" alt="Parisudham Banner - The Purest of the Pure"
+                        onerror="this.src='https://images.unsplash.com/photo-1596649859556-9d332617f1a3?q=80&w=2000&auto=format&fit=crop'">
                 </div>
             </div>
         </section>
@@ -44,50 +49,68 @@
         <section class="section-padding bg-light text-center" style="padding-bottom: 0;">
             <div class="container">
                 <h2 class="section-title" style="font-size: 3rem; margin-bottom: 20px;">Who We Are</h2>
-                <p id="home-about-text" style="max-width: 900px; margin: 20px auto; font-size: 1.5rem; line-height: 1.8; color: #444;">Loading...</p>
-                <a id="home-brochure-btn" href="#" target="_blank" class="btn btn-outline mt-4" style="display:none;">Download Our Brochure</a>
+                <p id="home-about-text"
+                    style="max-width: 900px; margin: 20px auto; font-size: 1.5rem; line-height: 1.8; color: #444;">
+                    Loading...</p>
+                <a id="home-brochure-btn" href="#" target="_blank" class="btn btn-outline mt-4"
+                    style="display:none;">Download Our Brochure</a>
             </div>
-            
-            <!-- Feature Strip HTML Module -->
-            <div class="feature-strip">
-                <div class="feature-strip-left">
+        </section>
+
+        <!-- Feature Strip HTML Module -->
+        <section id="feature-strip" class="feature-strip-section">
+            <div class="container">
+                <div class="feature-strip">
                     <div class="strip-item">
                         <div class="strip-icon">
-                            <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                            <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="1.5"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                </path>
+                            </svg>
                         </div>
                         <div class="strip-text">
                             Sourced from<br>the Heart of Kerala
                         </div>
                     </div>
-                    <div class="strip-divider"></div>
                     <div class="strip-item">
                         <div class="strip-icon">
-                            <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                            <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="1.5"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <path d="m9 12 2 2 4-4"></path>
+                            </svg>
                         </div>
                         <div class="strip-text">
                             International Food Safety<br>Standards (Australian Biosecurity<br>& FSANZ Compliant)
                         </div>
                     </div>
-                    <div class="strip-divider"></div>
                     <div class="strip-item">
                         <div class="strip-icon">
-                            <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.1 2 11a7 7 0 0 1-10 7Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
+                            <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="1.5"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.1 2 11a7 7 0 0 1-10 7Z">
+                                </path>
+                                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                            </svg>
                         </div>
                         <div class="strip-text">
                             Delivering Purity,<br>Taste & Tradition
                         </div>
                     </div>
-                </div>
-                <div class="feature-strip-right">
-                    <div class="quote-box">
-                        <span class="quote-mark quote-open">“</span>
-                        <p class="quote-text">Quality you can trust,<br>tradition you can taste.</p>
-                        <span class="quote-mark quote-close">”</span>
-                    </div>
+                    <!-- <div class="feature-strip-right">
+                        <div class="quote-box">
+                            <span class="quote-mark quote-open">“</span>
+                            <p class="quote-text">Quality you can trust,<br>tradition you can taste.</p>
+                            <span class="quote-mark quote-close">”</span>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </section>
-
         <!-- New Arrivals Slider -->
         <section id="new-arrivals" class="section-padding">
             <div class="container">
@@ -131,10 +154,13 @@
 
         <!-- Contact & Review Area -->
         <section class="section-padding bg-light">
-            <div class="container" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+            <div class="container"
+                style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
                 <div>
                     <h2 class="section-title">Leave a Message</h2>
-                    <form style="background:#fff; padding:30px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" onsubmit="event.preventDefault(); alert('Message sent!');">
+                    <form
+                        style="background:#fff; padding:30px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);"
+                        onsubmit="event.preventDefault(); alert('Message sent!');">
                         <div class="form-group"><input type="text" placeholder="Your Name" required></div>
                         <div class="form-group"><input type="email" placeholder="Your Email" required></div>
                         <div class="form-group"><textarea rows="4" placeholder="Your Message" required></textarea></div>
@@ -143,7 +169,8 @@
                 </div>
                 <div id="google-review-container">
                     <h2 class="section-title">Reviews</h2>
-                    <div id="google-review-widget-html" style="background:#fff; padding:20px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08); min-height: 200px; display:flex; align-items:center; justify-content:center;">
+                    <div id="google-review-widget-html"
+                        style="background:#fff; padding:20px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08); min-height: 200px; display:flex; align-items:center; justify-content:center;">
                         <p style="color:#777; font-style:italic;">Review widget loading...</p>
                     </div>
                 </div>
@@ -182,4 +209,5 @@
     <script src="js/main.js"></script>
     <script src="js/home.js"></script>
 </body>
+
 </html>
