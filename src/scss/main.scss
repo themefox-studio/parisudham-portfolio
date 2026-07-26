@@ -198,7 +198,7 @@ img {
 /* Feature Strip Component */
 .feature-strip-section {
     position: relative;
-    background-color: #b71c1c;
+    background-color: $primary;
     margin-top: 60px;
 }
 
@@ -221,16 +221,18 @@ img {
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
+
+            svg {
+                font-size: 30px;
+                width: 48px;
+                height: 48px;
+            }
         }
 
         .strip-text {
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             line-height: 1.4;
             font-weight: 500;
-        }
-
-        &:not(:last-child) {
-            border-right: 1px solid rgba(#fff, 0.5);
         }
     }
 
@@ -330,7 +332,7 @@ img {
 
 /* Footer */
 .footer {
-    background-color: $primary-dark;
+    background-color: $footer-bg;
     color: $light;
     padding: 60px 0 20px;
 
@@ -338,7 +340,7 @@ img {
     h4 {
         color: $light;
         margin-bottom: 20px;
-        font-size: 25px;
+        font-size: 28px;
         font-weight: 500;
     }
 
@@ -452,8 +454,8 @@ img {
 }
 
 .section-title {
-    font-size: 40px;
-    font-weight: 500;
+    font-size: 44px;
+    font-weight: 700;
     text-align: center;
 }
 
