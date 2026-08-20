@@ -17,6 +17,27 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+// --- Under Construction Logic ---
+const IS_UNDER_CONSTRUCTION = true; // Set to false to go officially live!
+
+app.use((req, res, next) => {
+    if (IS_UNDER_CONSTRUCTION) {
+        // If they have the secret preview query, give them a cookie
+        if (req.query.preview === 'true') {
+            res.cookie('preview_mode', 'true', { maxAge: 9000000, httpOnly: true });
+            return res.redirect(req.path); // Reload without query string
+        }
+        
+        // If they don't have the cookie and try to visit root or index.html
+        if (req.cookies.preview_mode !== 'true') {
+            if (req.path === '/' || req.path === '/index.html') {
+                return res.sendFile(path.join(__dirname, 'public', 'under-construction.html'));
+            }
+        }
+    }
+    next();
+});
+
 // Serve static frontend files
 app.use(express.static(path.join(__dirname, 'public')));
 
