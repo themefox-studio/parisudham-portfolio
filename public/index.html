@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parisudham | The Purest of the Pure</title>
-    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Sen:wght@400;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Sen:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <header class="navbar">
         <div class="container nav-container">
@@ -22,183 +18,171 @@
                 <span class="bar"></span>
             </button>
             <nav class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="about.html">About</a>
-                <a href="categories.html">Products</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html" class="active">HOME</a>
+                <a href="about.html">ABOUT US</a>
+                <a href="categories.html">OUR PRODUCTS</a>
+                <a href="contact.html">CONTACT US</a>
             </nav>
-            <div class="nav-actions">
-                <a href="images/Parisudham_Brochure.pdf" class="btn btn-outline" target="_blank" download>Download
-                    Brochure</a>
-            </div>
         </div>
     </header>
 
     <main>
-        <!-- Hero Banner -->
-        <section class="hero-slider">
-            <div class="slider-container">
-                <div class="slide active">
-                    <img src="images/banner.jpg" alt="Parisudham Banner - The Purest of the Pure"
-                        onerror="this.src='https://images.unsplash.com/photo-1596649859556-9d332617f1a3?q=80&w=2000&auto=format&fit=crop'">
-                </div>
+        <!-- Hero Section -->
+        <section class="hero-new">
+            <div class="hero-bg">
+                <img src="images/placeholder-hero.jpg" alt="Hero Background">
+            </div>
+            <div class="hero-overlay-text">
+                <h1>BRINGING HERITAGE<br>TO YOUR KITCHEN !</h1>
             </div>
         </section>
 
         <!-- About Section -->
-        <section class="section-padding bg-light text-center" style="padding-bottom: 0;">
-            <div class="container">
-                <h2 class="section-title" style="font-size: 3rem; margin-bottom: 20px;">Who We Are</h2>
-                <p id="home-about-text"
-                    style="max-width: 900px; margin: 20px auto; font-size: 1.5rem; line-height: 1.8; color: #444;">
-                    Loading...</p>
-                <a id="home-brochure-btn" href="#" target="_blank" class="btn btn-outline mt-4"
-                    style="display:none;">Download Our Brochure</a>
-            </div>
-        </section>
-
-        <!-- Feature Strip HTML Module -->
-        <section id="feature-strip" class="feature-strip-section">
-            <div class="container">
-                <div class="feature-strip">
-                    <div class="strip-item">
-                        <div class="strip-icon">
-                            <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="1.5"
-                                fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="2" y1="12" x2="22" y2="12"></line>
-                                <path
-                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                                </path>
-                            </svg>
+        <section class="about-new section-padding">
+            <div class="container about-grid">
+                <div class="about-img-wrap">
+                    <img src="images/placeholder-arch.jpg" alt="About Image" class="arch-img">
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">Who We Are</span>
+                    <h2 class="section-title-new">The Ultimate Choice for<br>Authentic & Pure Goodness</h2>
+                    <p id="home-about-text">Loading...</p>
+                    <a id="home-brochure-btn" href="about.html" class="btn btn-primary mt-4">READ OUR STORY</a>
+                    
+                    <div class="about-features">
+                        <div class="feature-box">
+                            <div class="icon-placeholder"></div>
+                            <div class="fb-text">
+                                <h4>100% Natural & Pure</h4>
+                                <p>No artificial colors or preservatives</p>
+                            </div>
                         </div>
-                        <div class="strip-text">
-                            Sourced from<br>the Heart of Kerala
+                        <div class="feature-box">
+                            <div class="icon-placeholder"></div>
+                            <div class="fb-text">
+                                <h4>Premium Quality</h4>
+                                <p>Export standard ingredients</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="strip-item">
-                        <div class="strip-icon">
-                            <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="1.5"
-                                fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                <path d="m9 12 2 2 4-4"></path>
-                            </svg>
-                        </div>
-                        <div class="strip-text">
-                            International Food Safety<br>Standards (Australian Biosecurity<br>& FSANZ Compliant)
-                        </div>
-                    </div>
-                    <div class="strip-item">
-                        <div class="strip-icon">
-                            <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="1.5"
-                                fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.1 2 11a7 7 0 0 1-10 7Z">
-                                </path>
-                                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
-                            </svg>
-                        </div>
-                        <div class="strip-text">
-                            Delivering Purity,<br>Taste & Tradition
-                        </div>
-                    </div>
-                    <!-- <div class="feature-strip-right">
-                        <div class="quote-box">
-                            <span class="quote-mark quote-open">“</span>
-                            <p class="quote-text">Quality you can trust,<br>tradition you can taste.</p>
-                            <span class="quote-mark quote-close">”</span>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </section>
-        <!-- New Arrivals Slider -->
-        <section id="new-arrivals" class="section-padding">
+
+        <!-- Featured Products -->
+        <section class="featured-new section-padding bg-beige">
             <div class="container">
-                <h2 class="section-title">Latest Arrivals</h2>
+                <span class="section-tag">Get The Best</span>
+                <h2 class="section-title-condensed">FEATURED PRODUCTS</h2>
                 <div class="swiper product-swiper mt-4">
                     <div class="swiper-wrapper" id="new-arrivals-wrapper">
                         <!-- Loaded dynamically -->
                     </div>
-                    <div class="swiper-pagination product-pagination"></div>
-                    <div class="swiper-button-next product-next"></div>
-                    <div class="swiper-button-prev product-prev"></div>
                 </div>
             </div>
         </section>
 
-        <!-- Categories Slider -->
-        <section class="section-padding bg-light">
+        <!-- Stats Strip -->
+        <section class="stats-strip">
+            <div class="container stats-grid">
+                <div class="stats-left">
+                    <h3>Delivering authentic flavors since 1993.</h3>
+                </div>
+                <div class="stats-right">
+                    <div class="stat-item">
+                        <span class="stat-num">25+</span>
+                        <span class="stat-label">Countries Served</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">50+</span>
+                        <span class="stat-label">Premium Products</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">Guaranteed Quality</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Products -->
+        <section class="products-new section-padding bg-white">
             <div class="container">
-                <h2 class="section-title">Shop by Category</h2>
+                <span class="section-tag">Top Rated Categories</span>
+                <h2 class="section-title-condensed">OUR PRODUCTS</h2>
                 <div class="swiper category-swiper mt-4">
                     <div class="swiper-wrapper" id="categories-wrapper">
                         <!-- Loaded dynamically -->
                     </div>
-                    <div class="swiper-pagination cat-pagination"></div>
+                </div>
+                <div class="text-center mt-5">
+                    <a href="categories.html" class="btn btn-primary">VIEW ALL</a>
                 </div>
             </div>
         </section>
 
-        <!-- Testimonials Slider -->
-        <section class="testimonials section-padding">
-            <div class="container text-center">
-                <h2 class="section-title" style="color: #fff;">What Our Customers Say</h2>
-                <div class="swiper testimonial-swiper mt-4">
-                    <div class="swiper-wrapper" id="testimonials-wrapper">
-                        <!-- Loaded dynamically -->
+        <!-- Testimonials -->
+        <section class="testimonials-new section-padding bg-beige">
+            <div class="container test-grid">
+                <div class="test-left">
+                    <span class="section-tag">Testimonials</span>
+                    <h2 class="section-title-new">Straight from the homes<br>we serve</h2>
+                    <p>We take pride in delivering the finest ingredients to your home.</p>
+                    <a href="about.html" class="btn btn-primary mt-4">READ ALL</a>
+                </div>
+                <div class="test-right">
+                    <div class="test-card-container">
+                        <div class="swiper testimonial-swiper">
+                            <div class="swiper-wrapper" id="testimonials-wrapper">
+                                <!-- Loaded dynamically -->
+                            </div>
+                        </div>
+                        <div class="test-nav">
+                            <div class="test-prev">&larr;</div>
+                            <div class="test-next">&rarr;</div>
+                        </div>
                     </div>
-                    <div class="swiper-pagination test-pagination"></div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact & Review Area -->
-        <section class="section-padding bg-light">
-            <div class="container"
-                style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-                <div>
-                    <h2 class="section-title">Leave a Message</h2>
-                    <form
-                        style="background:#fff; padding:30px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);"
-                        onsubmit="event.preventDefault(); alert('Message sent!');">
-                        <div class="form-group"><input type="text" placeholder="Your Name" required></div>
-                        <div class="form-group"><input type="email" placeholder="Your Email" required></div>
-                        <div class="form-group"><textarea rows="4" placeholder="Your Message" required></textarea></div>
-                        <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+        <!-- Newsletter Strip -->
+        <section class="newsletter-strip">
+            <div class="container nl-grid">
+                <div class="nl-left">
+                    <h3>Join Us & Get Special Offers From Us</h3>
+                </div>
+                <div class="nl-right">
+                    <form class="nl-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit" class="btn btn-primary">SUBSCRIBE</button>
                     </form>
-                </div>
-                <div id="google-review-container">
-                    <h2 class="section-title">Reviews</h2>
-                    <div id="google-review-widget-html"
-                        style="background:#fff; padding:20px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08); min-height: 200px; display:flex; align-items:center; justify-content:center;">
-                        <p style="color:#777; font-style:italic;">Review widget loading...</p>
-                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer-new">
         <div class="container footer-content">
-            <div class="footer-col">
-                <h3>Parisudham</h3>
-                <p>The Purest of the Pure.</p>
-                <div id="social-links" style="margin-top:20px; display:flex; gap:15px;"></div>
+            <div class="footer-col brand-col">
+                <img src="images/logo-white.png" alt="Parisudham" class="footer-logo" onerror="this.src='images/logo.png'">
+                <div id="social-links" class="socials mt-3"></div>
             </div>
             <div class="footer-col">
-                <h4>Quick Links</h4>
+                <h4>Pages</h4>
                 <ul class="footer-links">
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="categories.html">Products</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="categories.html">OUR PRODUCTS</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
                 </ul>
             </div>
             <div class="footer-col" id="footer-contact">
-                <h4>Contact Us</h4>
+                <h4>Get In Touch</h4>
                 <p>Loading contact details...</p>
             </div>
         </div>
-        <div class="footer-bottom">
+        <div class="footer-bottom text-center">
             <p>&copy; 2026 Parisudham Ltd. All Rights Reserved.</p>
         </div>
     </footer>
@@ -209,5 +193,4 @@
     <script src="js/main.js"></script>
     <script src="js/home.js"></script>
 </body>
-
 </html>

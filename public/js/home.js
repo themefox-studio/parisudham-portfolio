@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <div class="swiper-slide">
                     <div class="category-card" onclick="window.location.href='product.html?id=${prod.id}'">
                         <div class="cat-img" style="position:relative;">
-                            <span style="position:absolute; top:10px; right:10px; background:#b71c1c; color:#fff; padding:4px 10px; border-radius:20px; font-size:0.8rem; font-weight:bold; z-index:10;">NEW</span>
+                            <span class="badge-new">NEW</span>
                             <img src="${prod.image || 'images/placeholder-prod.png'}" style="width:100%; height:100%; object-fit:cover;">
                         </div>
                         <div class="cat-info">
@@ -102,10 +102,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         new Swiper('.testimonial-swiper', {
             slidesPerView: 1,
             spaceBetween: 30,
-            pagination: { el: '.test-pagination', clickable: true },
+            navigation: { nextEl: '.test-next', prevEl: '.test-prev' },
             autoplay: { delay: 5000 }
         });
     } else if (testWrapper) {
         testWrapper.innerHTML = '<p>No testimonials yet.</p>';
     }
 });
+
+
+

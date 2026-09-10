@@ -1,19 +1,24 @@
-$primary: #CF3247;
-$primary-dark: #a82839;
+$primary: #e01e26;
+$primary-dark: #b8171e;
 $secondary: #fbc02d;
 $secondary-light: #fff59d;
 $dark: #333333;
 $light: #ffffff;
-$bg-light: #faf9f6;
+$bg-light: #ffffff;
 $bg-gray: #f4f4f4;
+$bg-beige: #f5f2eb;
+$dark-brown: #3b2322;
+$darkest-brown: #281716;
+$tag-bg: #fcdcd9;
 
 $font-heading: 'Philosopher', serif;
+$font-condensed: 'Oswald', sans-serif;
 $font-body: 'Sen', sans-serif;
 
 $text-color: #6A6A6A;
 $heading-color: #000000;
 
-$footer-bg:#221F1F;
+$footer-bg: $darkest-brown;
 
 $transition: all 0.3s ease;
 $shadow: 0 4px 12px rgba(0,0,0,0.08);
