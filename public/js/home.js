@@ -1,11 +1,12 @@
-document.addEventListener('DOMContentLoaded', async () => {
+﻿document.addEventListener('DOMContentLoaded', async () => {
     const data = await fetchSiteData();
     
     if (data.pageContent) {
-        document.getElementById('home-about-text').innerText = data.pageContent.homeAbout || '';
+        const homeAboutText = document.getElementById('home-about-text');
+        if(homeAboutText) homeAboutText.innerText = data.pageContent.homeAbout || '';
         
-        if (data.pageContent.brochureUrl) {
-            const btn = document.getElementById('home-brochure-btn');
+        const btn = document.getElementById('home-brochure-btn');
+        if (data.pageContent.brochureUrl && btn) {
             btn.href = data.pageContent.brochureUrl;
             btn.style.display = 'inline-block';
         }
@@ -13,15 +14,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         const socialContainer = document.getElementById('social-links');
         if (socialContainer) {
             let sHtml = '';
-            if (data.pageContent.facebookUrl) sHtml += `<a href="${data.pageContent.facebookUrl}" target="_blank" style="color:#fbc02d; font-weight:bold;">Facebook</a>`;
-            if (data.pageContent.instagramUrl) sHtml += `<a href="${data.pageContent.instagramUrl}" target="_blank" style="color:#fbc02d; font-weight:bold;">Instagram</a>`;
+            if (data.pageContent.facebookUrl) sHtml += <a href="${data.pageContent.facebookUrl}" target="_blank" style="color:#fbc02d; font-weight:bold;">Facebook</a>;
+            if (data.pageContent.instagramUrl) sHtml += <a href="${data.pageContent.instagramUrl}" target="_blank" style="color:#fbc02d; font-weight:bold;">Instagram</a>;
             socialContainer.innerHTML = sHtml;
         }
 
         const revWidget = document.getElementById('google-review-widget-html');
         if (revWidget && data.pageContent.googleReviewHtml) {
             revWidget.innerHTML = data.pageContent.googleReviewHtml;
-            revWidget.style.padding = '0'; // Let widget control padding
+            revWidget.style.padding = '0';
             revWidget.style.background = 'transparent';
             revWidget.style.boxShadow = 'none';
         } else if (revWidget) {
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const newArrivals = data.products.filter(p => p.isNewArrival).sort((a,b) => (a.order||0) - (b.order||0));
         
         if(newArrivals.length > 0) {
-            naWrapper.innerHTML = newArrivals.map(prod => `
+            naWrapper.innerHTML = newArrivals.map(prod => 
                 <div class="swiper-slide">
                     <div class="category-card" onclick="window.location.href='product.html?id=${prod.id}'">
                         <div class="cat-img" style="position:relative;">
@@ -47,7 +48,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </div>
                     </div>
                 </div>
-            `).join('');
+            ).join('');
             
             new Swiper('.product-swiper', {
                 slidesPerView: 1,
@@ -65,7 +66,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const catWrapper = document.getElementById('categories-wrapper');
     if (catWrapper && data.categories) {
         const sortedCats = [...data.categories].sort((a,b) => (a.order||0) - (b.order||0));
-        catWrapper.innerHTML = sortedCats.map(cat => `
+        catWrapper.innerHTML = sortedCats.map(cat => 
             <div class="swiper-slide">
                 <div class="category-card" onclick="window.location.href='categories.html#${cat.id}'">
                     <div class="cat-img">
@@ -76,7 +77,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     </div>
                 </div>
             </div>
-        `).join('');
+        ).join('');
 
         new Swiper('.category-swiper', {
             slidesPerView: 2,
@@ -89,15 +90,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Testimonials
     const testWrapper = document.getElementById('testimonials-wrapper');
     if (testWrapper && data.testimonials && data.testimonials.length > 0) {
-        testWrapper.innerHTML = data.testimonials.map(t => `
+        testWrapper.innerHTML = data.testimonials.map(t => 
             <div class="swiper-slide">
-                <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 8px; max-width: 600px; margin: 0 auto;">
-                    <div style="color:#fbc02d; font-size:1.5rem; margin-bottom:10px;">${'★'.repeat(t.rating)}${'☆'.repeat(5-t.rating)}</div>
-                    <p style="font-size:1.2rem; font-style:italic; margin-bottom:20px;">"${t.text}"</p>
-                    <h4 style="color:#fff;">- ${t.name}</h4>
+                <div class="test-card-ui">
+                    <p class="test-text">"${t.text}"</p>
+                    <div class="test-author">
+                        <h4>${t.name}</h4>
+                        <span class="test-stars">${'★'.repeat(t.rating)}</span>
+                    </div>
                 </div>
             </div>
-        `).join('');
+        ).join('');
 
         new Swiper('.testimonial-swiper', {
             slidesPerView: 1,
@@ -121,9 +124,3 @@ document.addEventListener('DOMContentLoaded', async () => {
         pagination: { el: '.hero-pagination', clickable: true }
     });
 });
-
-
-
-
-
-
