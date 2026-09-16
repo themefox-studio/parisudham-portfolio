@@ -105,10 +105,25 @@ document.addEventListener('DOMContentLoaded', async () => {
             navigation: { nextEl: '.test-next', prevEl: '.test-prev' },
             autoplay: { delay: 5000 }
         });
+
     } else if (testWrapper) {
         testWrapper.innerHTML = '<p>No testimonials yet.</p>';
     }
+
+    // Hero Slider Initialization
+    new Swiper('.hero-swiper', {
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+        speed: 1200,
+        autoplay: { delay: 6000, disableOnInteraction: false },
+        loop: true,
+        navigation: { nextEl: '.hero-next', prevEl: '.hero-prev' },
+        pagination: { el: '.hero-pagination', clickable: true }
+    });
 });
+
+
+
 
 
 
