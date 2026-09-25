@@ -11,6 +11,7 @@ html {
 }
 
 body {
+    overflow-x: hidden; /* Mobile-proof AOS animations */
     font-family: $font-body;
     color: $text-color;
     background-color: $bg-light;
@@ -1280,4 +1281,5 @@ main {
         }
     }
 }
+
 

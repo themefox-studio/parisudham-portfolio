@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  overflow-x: hidden; /* Mobile-proof AOS animations */
   font-family: "Hanken Grotesk", sans-serif;
   color: #6A6A6A;
   background-color: #ffffff;

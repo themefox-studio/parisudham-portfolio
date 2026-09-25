@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parisudham | The Purest of the Pure</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css">
     <link
@@ -36,7 +37,7 @@
             <div class="hero-bg">
                 <img src="images/hero-img.jpg" alt="Hero Background">
             </div>
-            <div class="hero-overlay-text">
+            <div class="hero-overlay-text" data-aos="fade-up" data-aos-delay="300">
                 <h1>BRINGING HERITAGE<br>TO YOUR KITCHEN !</h1>
             </div>
         </section>
@@ -88,7 +89,7 @@
             <div class="container">
                 <span class="section-tag">Our Bestsellers</span>
                 <h2 class="section-title-condensed">FEATURED PRODUCTS</h2>
-                <div class="swiper product-swiper mt-4">
+                <div class="swiper product-swiper mt-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="swiper-wrapper" id="new-arrivals-wrapper">
                         <!-- Loaded dynamically -->
                     </div>
@@ -99,10 +100,10 @@
         <!-- Stats Strip -->
         <section class="stats-strip">
             <div class="container stats-grid">
-                <div class="stats-left">
+                <div class="stats-left" data-aos="fade-right">
                     <h3>Delivering authentic flavors since 1993.</h3>
                 </div>
-                <div class="stats-right">
+                <div class="stats-right" data-aos="fade-left" data-aos-delay="200">
                     <div class="stat-item">
                         <span class="stat-num">25+</span>
                         <span class="stat-label">Countries Served</span>
@@ -124,7 +125,7 @@
             <div class="container">
                 <span class="section-tag">Top Rated Categories</span>
                 <h2 class="section-title-condensed">OUR PRODUCTS</h2>
-                <div class="swiper category-swiper mt-4">
+                <div class="swiper category-swiper mt-4" data-aos="zoom-in" data-aos-delay="200">
                     <div class="swiper-wrapper" id="categories-wrapper">
                         <!-- Loaded dynamically -->
                     </div>
@@ -137,40 +138,58 @@
 
         <!-- Testimonials -->
         <section class="testimonials-new section-padding bg-beige">
-            <div class="container test-grid">
-                <div class="test-left">
-                    <span class="section-tag" style="background: #ffb8b8; color: #000; border-radius: 20px;">Testimonials</span>
-                    <h2 class="section-title-new" style="margin-bottom: 20px; font-weight: 700;">Straight from the homes<br>we serve</h2>
-                    <p style="color: #555; line-height: 1.6; margin-bottom: 30px; font-size: 16px;">We have been delivering the finest natural ingredients to kitchens world-wide. But don't just take our word for it.</p>
-                    <a href="about.html" class="btn btn-primary" style="border-radius: 0; padding: 12px 30px; font-weight: 600;">READ ALL</a>
-                </div>
-                <div class="test-right">
-                    <div class="test-card-master">
-                        <div class="swiper testimonial-swiper">
-                            <div class="swiper-wrapper" id="testimonials-wrapper">
-                                <!-- Loaded dynamically -->
+            <div class="container">
+                <div class="test-grid">
+                    <div class="test-left" data-aos="fade-right">
+                        <span class="section-tag"
+                            style="background: #ffb8b8; color: #000; border-radius: 20px;">Testimonials</span>
+                        <h2 class="section-title-new" style="margin-bottom: 20px; font-weight: 700;">Straight from the
+                            homes<br>we serve</h2>
+                        <p style="color: #555; line-height: 1.6; margin-bottom: 30px; font-size: 16px;">We have been
+                            delivering the finest natural ingredients to kitchens world-wide. But don't just take our
+                            word for it.</p>
+                        <a href="about.html" class="btn btn-primary"
+                            style="border-radius: 0; padding: 12px 30px; font-weight: 600;">READ ALL</a>
+                    </div>
+                    <div class="test-right" data-aos="fade-left" data-aos-delay="200">
+                        <div class="test-card-master">
+                            <div class="swiper testimonial-swiper">
+                                <div class="swiper-wrapper" id="testimonials-wrapper">
+                                    <!-- Loaded dynamically -->
+                                </div>
                             </div>
-                        </div>
-                        <div class="test-nav-controls">
-                            <div class="test-prev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></div>
-                            <div class="test-next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                            <div class="test-nav-controls">
+                                <div class="test-prev"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                                    </svg></div>
+                                <div class="test-next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M5 12h14M12 5l7 7-7 7" />
+                                    </svg></div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <!-- Newsletter Strip -->
         <section class="newsletter-strip">
-            <div class="container nl-grid">
-                <div class="nl-left">
-                    <h3>Join Us & Get Special Offers From Us</h3>
-                </div>
-                <div class="nl-right">
-                    <form class="nl-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
-                        <input type="email" placeholder="Email Address" required>
-                        <button type="submit" class="btn btn-primary">SUBSCRIBE</button>
-                    </form>
+            <div class="container">
+                <div class="nl-grid" data-aos="fade-up">
+                    <div class="nl-left">
+                        <h3>Join Us & Get Special Offers From Us</h3>
+                    </div>
+                    <div class="nl-right">
+                        <form class="nl-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                            <input type="email" placeholder="Email Address" required>
+                            <button type="submit" class="btn btn-primary">SUBSCRIBE</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -205,6 +224,7 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
     <script src="js/home.js"></script>
 </body>

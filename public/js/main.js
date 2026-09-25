@@ -1,3 +1,14 @@
+﻿document.addEventListener('DOMContentLoaded', () => {
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 1000, // Super smooth duration
+            easing: 'ease-out-cubic',
+            once: false,    // Trigger animations every time you scroll up and down
+            mirror: true,   // Animate elements out while scrolling past them
+            offset: 100,    // Offset from original trigger point
+        });
+    }
+});
 const API_URL = '/api';
 
 async function fetchSiteData() {
@@ -42,3 +53,4 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 });
+
