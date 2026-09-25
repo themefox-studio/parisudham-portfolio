@@ -92,11 +92,12 @@
     if (testWrapper && data.testimonials && data.testimonials.length > 0) {
         testWrapper.innerHTML = data.testimonials.map(t => `
             <div class="swiper-slide">
-                <div class="test-card-ui">
+                <div class="test-slide-content">
                     <p class="test-text">"${t.text}"</p>
-                    <div class="test-author">
+                    <hr class="test-divider">
+                    <div class="test-author-info">
                         <h4>${t.name}</h4>
-                        <span class="test-stars">${'★'.repeat(t.rating)}${'☆'.repeat(5-t.rating)}</span>
+                        <span>Kochi, Keralam</span>
                     </div>
                 </div>
             </div>
@@ -105,14 +106,15 @@
         new Swiper('.testimonial-swiper', {
             slidesPerView: 1,
             spaceBetween: 30,
+            loop: true,
+            speed: 800,
             navigation: { nextEl: '.test-next', prevEl: '.test-prev' },
-            autoplay: { delay: 5000 }
+            autoplay: { delay: 5000, disableOnInteraction: false }
         });
 
     } else if (testWrapper) {
         testWrapper.innerHTML = '<p>No testimonials yet.</p>';
     }
-
 
     // Number Counter Animation for Stats
     const statsSection = document.querySelector('.stats-strip');
@@ -123,7 +125,6 @@
 
         const startCounting = () => {
             statNums.forEach(stat => {
-                // Extract target and suffix on first run
                 if (!stat.hasAttribute('data-target')) {
                     const text = stat.innerText.trim();
                     const target = parseInt(text.replace(/[^0-9]/g, '')) || 0;
@@ -137,8 +138,8 @@
                 const suffix = stat.getAttribute('data-suffix');
                 
                 let current = 0;
-                const duration = 2000; // 2 seconds total animation
-                const frameRate = 30; // 30ms per frame
+                const duration = 2000;
+                const frameRate = 30;
                 const totalFrames = Math.round(duration / frameRate);
                 const increment = target / totalFrames;
 
@@ -161,9 +162,8 @@
                 started = true;
                 startCounting();
             }
-        }, { threshold: 0.4 }); // Trigger when 40% of the section is visible
+        }, { threshold: 0.4 });
 
         observer.observe(statsSection);
     }
 });
-

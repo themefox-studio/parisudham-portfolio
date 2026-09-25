@@ -627,7 +627,7 @@ img {
 
 .section-title-condensed {
     font-family: $font-condensed;
-    font-size: 48px;
+    font-size: 70px;
     font-weight: 700;
     text-transform: uppercase;
     color: $heading-color;
@@ -800,10 +800,38 @@ img {
 
 /* Stats Strip */
 .stats-strip {
+    position: relative;
     background-color: $dark-brown;
     color: #fff;
     padding: 60px 0;
     position: relative;
+
+    &::after,
+    &::before {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        content: '';
+        display: block;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &::before {
+        width: 148px;
+        height: 100%;
+        left: 20px;
+        background-image: url('#{$img-path}shape-left.png');
+    }
+
+
+    &::after {
+        width: 153px;
+        height: 100%;
+        right: 20px;
+        background-image: url('#{$img-path}shape-right.png');
+    }
 
     .stats-grid {
         display: grid;
@@ -813,10 +841,11 @@ img {
     }
 
     .stats-left h3 {
-        font-size: 28px;
+        font-size: 35px;
         line-height: 1.4;
         font-weight: 600;
         margin: 0;
+        color: #fff;
     }
 
     .stats-right {
@@ -828,17 +857,20 @@ img {
 
             .stat-num {
                 display: block;
-                font-size: 40px;
+                font-family: $font-heading;
+                font-size: 60px;
+                line-height: 60px;
                 font-weight: 700;
                 color: $primary;
                 margin-bottom: 10px;
             }
 
             .stat-label {
-                font-size: 14px;
-                text-transform: uppercase;
+                font-size: 16px;
+                font-weight: 500;
+                text-transform: capitalize;
                 letter-spacing: 1px;
-                color: #ccc;
+                color: #fff;
             }
         }
     }
@@ -851,72 +883,81 @@ img {
     gap: 60px;
     align-items: center;
 
-    .test-card-container {
+    .test-card-master {
         position: relative;
-        padding-bottom: 50px;
-    }
-
-    .test-card-ui {
         background: #fff;
-        padding: 40px;
-        border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
+    .testimonial-swiper {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .test-slide-content {
         .test-text {
-            font-size: 20px;
-            font-style: italic;
-            color: #444;
-            margin-bottom: 30px;
-            line-height: 1.6;
+            font-size: 22px;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 40px;
+            line-height: 1.5;
+            font-family: $font-body;
         }
 
-        .test-author {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .test-divider {
+            border: none;
+            border-top: 1px solid #eee;
+            margin-bottom: 20px;
+        }
 
+        .test-author-info {
             h4 {
-                margin: 0;
-                font-size: 18px;
+                margin: 0 0 4px 0;
+                font-size: 16px;
+                font-weight: 600;
+                color: #000;
             }
-
-            .test-stars {
-                color: $secondary;
-                font-size: 20px;
-                letter-spacing: 2px;
+            span {
+                font-size: 14px;
+                color: #888;
             }
         }
     }
 
-    .test-nav {
+    .test-nav-controls {
         position: absolute;
-        bottom: 0;
-        right: 0;
+        bottom: 50px;
+        right: 50px;
         display: flex;
         gap: 10px;
+        z-index: 10;
 
         div {
-            width: 40px;
-            height: 40px;
-            border: 1px solid #ddd;
-            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px; /* slightly rounded squares */
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             background: #fff;
             color: #333;
-            transition: 0.3s;
+            transition: all 0.3s ease;
 
             &:hover {
-                background: $primary;
-                color: #fff;
-                border-color: $primary;
+                border-color: #000;
+                color: #000;
             }
         }
     }
 }
-
 /* Newsletter Strip */
 .newsletter-strip {
     background-color: #301a19;
@@ -931,8 +972,9 @@ img {
     }
 
     .nl-left h3 {
-        font-size: 24px;
+        font-size: 30px;
         margin: 0;
+        color: #fff;
     }
 
     .nl-form {
@@ -1061,25 +1103,37 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     .hero-bg {
         position: absolute;
-        top: 0; left: 0; width: 100%; height: 100%;
-        img { width: 100%; height: 100%; object-fit: cover; }
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
+
     .hero-bg::after {
         content: '';
         position: absolute;
-        top: 0; left: 0; width: 100%; height: 100%;
-        background: rgba(0,0,0,0.3);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
     }
-    
+
     .hero-overlay-text {
         position: relative;
         z-index: 2;
         text-align: center;
         color: #fff;
-        
+
         h1 {
             font-family: $font-condensed;
             font-size: 80px;
@@ -1087,12 +1141,18 @@ img {
             font-style: italic;
             text-transform: uppercase;
             line-height: 1;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
             letter-spacing: 2px;
         }
     }
 }
+
 @media (max-width: $mobile-breakpoint) {
-    .hero-new { height: 450px; }
-    .hero-new .hero-overlay-text h1 { font-size: 45px; }
+    .hero-new {
+        height: 450px;
+    }
+
+    .hero-new .hero-overlay-text h1 {
+        font-size: 45px;
+    }
 }
