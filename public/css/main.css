@@ -41,6 +41,11 @@ img {
   display: block;
 }
 
+main {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -711,7 +716,7 @@ img {
 /* Testimonials New */
 .test-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
   gap: 60px;
   align-items: center;
 }
@@ -765,7 +770,8 @@ img {
   width: 44px;
   height: 44px;
   border: 1px solid #e0e0e0;
-  border-radius: 6px; /* slightly rounded squares */
+  border-radius: 6px;
+  /* slightly rounded squares */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -781,15 +787,37 @@ img {
 
 /* Newsletter Strip */
 .newsletter-strip {
-  background-color: #301a19;
+  position: relative;
+  background-color: #3d1c1c;
   padding: 50px 0;
   color: #fff;
 }
+.newsletter-strip::after {
+  position: absolute;
+  display: block;
+  content: "";
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #503737;
+  z-index: 0;
+}
 .newsletter-strip .nl-grid {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 40px 0;
+  z-index: 1;
+  margin-left: -40px;
+  margin-right: -40px;
+}
+.newsletter-strip .nl-left,
+.newsletter-strip .nl-right {
+  flex: 0 0 50%;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .newsletter-strip .nl-left h3 {
   font-size: 30px;
@@ -799,7 +827,9 @@ img {
 .newsletter-strip .nl-form {
   display: flex;
   gap: 10px;
-  width: 400px;
+  flex: auto;
+  max-width: 100%;
+  width: 100%;
 }
 .newsletter-strip .nl-form input {
   flex: 1;
@@ -949,6 +979,33 @@ img {
   .hero-new .hero-overlay-text h1 {
     font-size: 45px;
   }
+}
+/* Social Icons */
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.social-icon svg {
+  transition: transform 0.3s ease;
+}
+.social-icon:hover {
+  background: #e01e26;
+  color: #fff;
+}
+.social-icon:hover svg {
+  transform: scale(1.15);
 }
 
 /*# sourceMappingURL=main.css.map */
