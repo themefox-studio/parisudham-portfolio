@@ -369,6 +369,7 @@ main {
         overflow: hidden;
         background-color: #eee;
         padding-top: 113.84615384615384%;
+        margin-bottom: 5px;
 
         img {
             position: absolute;
@@ -382,7 +383,6 @@ main {
     }
 
     .cat-info {
-        padding: 20px;
         text-align: center;
 
         h3 {
@@ -842,22 +842,10 @@ main {
         transform: translateY(-5px);
     }
 
-    .cat-img {
-        height: 200px;
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        img {
-            max-height: 100%;
-            object-fit: contain;
-        }
-    }
-
     .cat-info h3 {
+        font-family: $font-body;
         font-size: 18px;
-        font-weight: 700;
+        font-weight: 600;
         margin: 0;
     }
 }

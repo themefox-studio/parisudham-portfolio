@@ -64,77 +64,88 @@
   "products": [
     {
       "id": "appam-podi",
-      "name": "Appam Podi",
+      "name": "Vadi Matta Rice",
       "categoryId": "flour-podi-mixes",
+      "order": 1,
       "description": "Authentic Appam Podi for soft and fluffy appams.",
       "features": [
         "100% Natural",
         "No Preservatives",
         "Easy to Cook"
       ],
-      "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600&q=80",
       "isNewArrival": true,
-      "order": 1
+      "image": "/images/1790363263880-pro-1.jpg"
     },
     {
       "id": "jackfruit-chips",
-      "name": "Jackfruit Chips",
-      "categoryId": "chips-snack-items",
+      "name": "Idiyappam Powder",
+      "categoryId": "rice-products",
+      "order": 2,
       "description": "Crispy and delicious Jackfruit chips made from premium quality jackfruit.",
       "features": [
         "Crunchy",
         "Traditional Taste"
       ],
-      "image": "https://images.unsplash.com/photo-1528750717929-32abb73d3bd9?w=600&q=80",
       "isNewArrival": true,
-      "order": 2
+      "image": "/images/1790363291417-pro-2.jpg"
     },
     {
       "id": "roasted-peanuts",
-      "name": "Roasted Peanuts",
-      "categoryId": "traditional-snacks",
+      "name": "Jaggery Powder",
+      "categoryId": "flour-podi-mixes",
+      "order": 3,
       "description": "Crunchy and fresh roasted peanuts.",
-      "features": ["High Protein", "Perfect Snack"],
-      "image": "https://loremflickr.com/600/400/peanuts",
+      "features": [
+        "High Protein",
+        "Perfect Snack"
+      ],
       "isNewArrival": true,
-      "order": 3
+      "image": "/images/1790363320918-pro-3.jpg"
     },
     {
       "id": "virgin-coconut-oil",
-      "name": "Virgin Coconut Oil",
+      "name": "Vermicelli Kheer Mix",
       "categoryId": "coconut-products",
+      "order": 4,
       "description": "Cold-pressed pure virgin coconut oil.",
-      "features": ["Cold Pressed", "100% Pure"],
-      "image": "https://loremflickr.com/600/400/coconut",
+      "features": [
+        "Cold Pressed",
+        "100% Pure"
+      ],
       "isNewArrival": true,
-      "order": 4
+      "image": "/images/1790363343628-pro-4.jpg"
     },
     {
       "id": "green-gram",
-      "name": "Green Gram (Moong Dal)",
+      "name": "Rice",
       "categoryId": "pulses-legumes",
+      "order": 5,
       "description": "Premium quality green gram.",
-      "features": ["Rich in Fiber", "Unpolished"],
-      "image": "https://loremflickr.com/600/400/lentils",
+      "features": [
+        "Rich in Fiber",
+        "Unpolished"
+      ],
       "isNewArrival": true,
-      "order": 5
+      "image": "/images/1790363370848-pro-2.jpg"
     },
     {
       "id": "turmeric-powder",
-      "name": "Turmeric Powder",
+      "name": "Payasam",
       "categoryId": "spices-masala-powders",
+      "order": 6,
       "description": "Bright and aromatic turmeric powder sourced from the best farms.",
-      "features": ["High Curcumin", "Natural Color"],
-      "image": "https://loremflickr.com/600/400/turmeric",
+      "features": [
+        "High Curcumin",
+        "Natural Color"
+      ],
       "isNewArrival": true,
-      "order": 6
+      "image": "/images/1790363389862-pro-4.jpg"
     }
   ],
   "users": [
     {
       "id": "admin-1",
       "username": "admin",
-      "passwordHash": "$2b$10$ruAOZ4qmqEAerTk1zV/Xu.QKiWDPWOvWw8y/Mix8mjCQ/YsNpz.Om",
       "role": "admin"
     }
   ],
