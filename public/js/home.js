@@ -14,8 +14,8 @@
         const socialContainer = document.getElementById('social-links');
         if (socialContainer) {
             let sHtml = '';
-            if (data.pageContent.facebookUrl) sHtml += <a href="${data.pageContent.facebookUrl}" target="_blank" style="color:#fbc02d; font-weight:bold;">Facebook</a>;
-            if (data.pageContent.instagramUrl) sHtml += <a href="${data.pageContent.instagramUrl}" target="_blank" style="color:#fbc02d; font-weight:bold;">Instagram</a>;
+            if (data.pageContent.facebookUrl) sHtml += `<a href="${data.pageContent.facebookUrl}" target="_blank" style="color:#fbc02d; font-weight:bold;">Facebook</a>`;
+            if (data.pageContent.instagramUrl) sHtml += `<a href="${data.pageContent.instagramUrl}" target="_blank" style="color:#fbc02d; font-weight:bold;">Instagram</a>`;
             socialContainer.innerHTML = sHtml;
         }
 
@@ -36,7 +36,7 @@
         const newArrivals = data.products.filter(p => p.isNewArrival).sort((a,b) => (a.order||0) - (b.order||0));
         
         if(newArrivals.length > 0) {
-            naWrapper.innerHTML = newArrivals.map(prod => 
+            naWrapper.innerHTML = newArrivals.map(prod => `
                 <div class="swiper-slide">
                     <div class="category-card" onclick="window.location.href='product.html?id=${prod.id}'">
                         <div class="cat-img" style="position:relative;">
@@ -48,7 +48,7 @@
                         </div>
                     </div>
                 </div>
-            ).join('');
+            `).join('');
             
             new Swiper('.product-swiper', {
                 slidesPerView: 1,
@@ -66,7 +66,7 @@
     const catWrapper = document.getElementById('categories-wrapper');
     if (catWrapper && data.categories) {
         const sortedCats = [...data.categories].sort((a,b) => (a.order||0) - (b.order||0));
-        catWrapper.innerHTML = sortedCats.map(cat => 
+        catWrapper.innerHTML = sortedCats.map(cat => `
             <div class="swiper-slide">
                 <div class="category-card" onclick="window.location.href='categories.html#${cat.id}'">
                     <div class="cat-img">
@@ -77,7 +77,7 @@
                     </div>
                 </div>
             </div>
-        ).join('');
+        `).join('');
 
         new Swiper('.category-swiper', {
             slidesPerView: 2,
@@ -90,17 +90,17 @@
     // Testimonials
     const testWrapper = document.getElementById('testimonials-wrapper');
     if (testWrapper && data.testimonials && data.testimonials.length > 0) {
-        testWrapper.innerHTML = data.testimonials.map(t => 
+        testWrapper.innerHTML = data.testimonials.map(t => `
             <div class="swiper-slide">
                 <div class="test-card-ui">
                     <p class="test-text">"${t.text}"</p>
                     <div class="test-author">
                         <h4>${t.name}</h4>
-                        <span class="test-stars">${'★'.repeat(t.rating)}</span>
+                        <span class="test-stars">${'★'.repeat(t.rating)}${'☆'.repeat(5-t.rating)}</span>
                     </div>
                 </div>
             </div>
-        ).join('');
+        `).join('');
 
         new Swiper('.testimonial-swiper', {
             slidesPerView: 1,
@@ -112,15 +112,4 @@
     } else if (testWrapper) {
         testWrapper.innerHTML = '<p>No testimonials yet.</p>';
     }
-
-    // Hero Slider Initialization
-    new Swiper('.hero-swiper', {
-        effect: 'fade',
-        fadeEffect: { crossFade: true },
-        speed: 1200,
-        autoplay: { delay: 6000, disableOnInteraction: false },
-        loop: true,
-        navigation: { nextEl: '.hero-next', prevEl: '.hero-prev' },
-        pagination: { el: '.hero-pagination', clickable: true }
-    });
 });

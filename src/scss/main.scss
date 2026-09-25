@@ -1,4 +1,4 @@
-@use 'variables' as *;
+﻿@use 'variables' as *;
 
 * {
     margin: 0;
@@ -1051,68 +1051,35 @@ img {
     z-index: 10;
 }
 
-/* =========================================
-   HERO SLIDER ANIMATIONS
-   ========================================= */
 
-.hero-slider-section {
+/* Hero Section Static */
+.hero-new {
     position: relative;
     width: 100%;
     height: 600px;
     overflow: hidden;
-}
-
-.hero-swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.hero-slider-item {
-    position: relative;
-    width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-
+    
     .hero-bg {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transform: scale(1.0);
-            transition: transform 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            /* Slow elegant zoom */
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            /* Slight darkening for text readability */
-        }
+        top: 0; left: 0; width: 100%; height: 100%;
+        img { width: 100%; height: 100%; object-fit: cover; }
     }
-
+    .hero-bg::after {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.3);
+    }
+    
     .hero-overlay-text {
         position: relative;
         z-index: 2;
         text-align: center;
         color: #fff;
-        width: 100%;
-        padding: 0 20px;
-
+        
         h1 {
             font-family: $font-condensed;
             font-size: 80px;
@@ -1120,77 +1087,12 @@ img {
             font-style: italic;
             text-transform: uppercase;
             line-height: 1;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
             letter-spacing: 2px;
-            opacity: 0;
-            transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        /* Initial states for different animation directions */
-        .anim-text-left {
-            transform: translateX(-60px);
-        }
-
-        .anim-text-right {
-            transform: translateX(60px);
-        }
-
-        .anim-text-top {
-            transform: translateY(-60px);
-        }
-
-        .anim-text-bottom {
-            transform: translateY(60px);
         }
     }
 }
-
-/* Active Slide Animations */
-.swiper-slide-active.hero-slider-item {
-    .hero-bg img {
-        transform: scale(1.1);
-        /* Zooms in slightly */
-    }
-
-    .hero-overlay-text h1 {
-        opacity: 1;
-        transform: translate(0, 0);
-        /* Brings text to normal position */
-        transition-delay: 0.4s;
-    }
-}
-
-/* Custom Swiper Controls */
-.hero-swiper {
-
-    .hero-prev,
-    .hero-next {
-        color: #fff;
-        opacity: 0.5;
-        transition: 0.3s;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
-
-    .swiper-pagination-bullet {
-        background: #fff;
-        opacity: 0.5;
-    }
-
-    .swiper-pagination-bullet-active {
-        opacity: 1;
-        background: $primary;
-    }
-}
-
 @media (max-width: $mobile-breakpoint) {
-    .hero-slider-section {
-        height: 450px;
-    }
-
-    .hero-slider-item .hero-overlay-text h1 {
-        font-size: 45px;
-    }
+    .hero-new { height: 450px; }
+    .hero-new .hero-overlay-text h1 { font-size: 45px; }
 }
