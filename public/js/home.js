@@ -112,4 +112,58 @@
     } else if (testWrapper) {
         testWrapper.innerHTML = '<p>No testimonials yet.</p>';
     }
+
+
+    // Number Counter Animation for Stats
+    const statsSection = document.querySelector('.stats-strip');
+    const statNums = document.querySelectorAll('.stat-num');
+
+    if (statsSection && statNums.length > 0) {
+        let started = false;
+
+        const startCounting = () => {
+            statNums.forEach(stat => {
+                // Extract target and suffix on first run
+                if (!stat.hasAttribute('data-target')) {
+                    const text = stat.innerText.trim();
+                    const target = parseInt(text.replace(/[^0-9]/g, '')) || 0;
+                    const suffix = text.replace(/[0-9]/g, '').trim();
+                    stat.setAttribute('data-target', target);
+                    stat.setAttribute('data-suffix', suffix);
+                    stat.innerText = '0' + suffix;
+                }
+                
+                const target = parseInt(stat.getAttribute('data-target'));
+                const suffix = stat.getAttribute('data-suffix');
+                
+                let current = 0;
+                const duration = 2000; // 2 seconds total animation
+                const frameRate = 30; // 30ms per frame
+                const totalFrames = Math.round(duration / frameRate);
+                const increment = target / totalFrames;
+
+                const updateCount = () => {
+                    current += increment;
+                    if (current >= target) {
+                        stat.innerText = target + suffix;
+                    } else {
+                        stat.innerText = Math.ceil(current) + suffix;
+                        setTimeout(updateCount, frameRate);
+                    }
+                };
+                
+                updateCount();
+            });
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !started) {
+                started = true;
+                startCounting();
+            }
+        }, { threshold: 0.4 }); // Trigger when 40% of the section is visible
+
+        observer.observe(statsSection);
+    }
 });
+
